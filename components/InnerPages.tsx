@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { audiences, solutionCapabilities, solutions } from "@/lib/content";
+import { audiences, solutions } from "@/lib/content";
 import "./InnerPages.css";
 
 type SimplePageProps = {
@@ -563,7 +563,7 @@ export function ContactContent() {
           <h2>One conversation. A clear path forward.</h2>
           <p className="lead">
             In one structured session, we map your data landscape and understand
-            where decisions are slowing down, and that's our starting point...
+            where decisions are slowing down, and that&apos;s our starting point...
           </p>
           <div className="contact-proof-grid" aria-label="Workshop details">
             {/* <article>
