@@ -171,41 +171,9 @@ export function HomePage() {
           <div className="advantage-panel" aria-label="Canyon advantage map">
             {advantagePillars.map((pillar, index) => (
               <article className="advantage-card reveal" key={pillar.title}>
-                <div className="advantage-visual" aria-hidden="true">
-                  {index === 0 ? (
-                    <div className="frag-kpi">
-                      <span>Priority · Margin recovery</span>
-                      <strong>+2.4 pts</strong>
-                      <em>vs plan</em>
-                      <i />
-                    </div>
-                  ) : null}
-                  {index === 1 ? (
-                    <div className="frag-own">
-                      <p>
-                        <span>NK</span>
-                        Review priced SKUs
-                        <em>Due Fri</em>
-                      </p>
-                      <p>
-                        <span>RS</span>
-                        Confirm dispatch plan
-                        <em>Done</em>
-                      </p>
-                    </div>
-                  ) : null}
-                  {index === 2 ? (
-                    <div className="frag-ent">
-                      <span>Operating view</span>
-                      <div>
-                        <em>Group</em>
-                        <em>Pipes</em>
-                        <em>Adhesives</em>
-                        <em>Paints</em>
-                      </div>
-                    </div>
-                  ) : null}
-                </div>
+                <span className="advantage-index">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
                 <div className="advantage-copy">
                   <h3>{pillar.title}</h3>
                   {/* <p>{pillar.outcome}</p> */}

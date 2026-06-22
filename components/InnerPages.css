@@ -398,21 +398,41 @@
 
 .about-mission-grid {
   display: grid;
-  gap: clamp(30px, 5vw, 70px);
+  gap: clamp(18px, 2.4vw, 26px);
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin: clamp(42px, 7vh, 64px) auto 0;
   max-width: 860px;
   text-align: left;
 }
 
+.about-mission-grid article {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    radial-gradient(
+      circle at 82% 16%,
+      rgba(250, 129, 18, 0.12),
+      transparent 32%
+    ),
+    var(--navy-deep);
+  background-size:
+    38px 38px,
+    38px 38px,
+    auto,
+    auto;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: clamp(26px, 2.6vw, 38px);
+}
+
 .about-mission-grid article .section-label {
-  color: #f07c1b;
+  color: #ff8d52;
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
 }
 
 .about-mission-grid p:not(.section-label) {
-  color: rgba(7, 19, 28, 0.62);
+  color: rgba(255, 255, 255, 0.78);
   font-size: clamp(0.96rem, 1.05vw, 1.06rem);
   line-height: 1.58;
   margin: 0;
