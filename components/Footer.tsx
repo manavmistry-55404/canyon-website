@@ -31,13 +31,13 @@ export function Footer() {
             <Link href="/solutions/canyon-grid">Canyon Grid</Link>
           </nav>
 
-          <nav className="footer-column" aria-label="Resources">
+          {/* <nav className="footer-column" aria-label="Resources">
             <strong>Resources</strong>
             <Link href="/resources/insights">Insights</Link>
             <Link href="/resources/articles">Articles</Link>
             <Link href="/resources/faqs">FAQs</Link>
             <Link href="/resources/media-downloads">Media & Downloads</Link>
-          </nav>
+          </nav> */}
 
           <div className="footer-column footer-focus">
             <strong>Focus</strong>
