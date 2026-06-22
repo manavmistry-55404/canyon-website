@@ -1,8 +1,22 @@
 .hero-section {
   background:
-    linear-gradient(90deg, rgba(4, 13, 20, 0.96) 0%, rgba(4, 13, 20, 0.86) 38%, rgba(4, 13, 20, 0.5) 74%, rgba(4, 13, 20, 0.38) 100%),
-    radial-gradient(circle at 78% 18%, rgba(250, 129, 18, 0.2), transparent 30%),
-    radial-gradient(circle at 30% 82%, rgba(148, 180, 193, 0.1), transparent 34%),
+    linear-gradient(
+      90deg,
+      rgba(4, 13, 20, 0.96) 0%,
+      rgba(4, 13, 20, 0.86) 38%,
+      rgba(4, 13, 20, 0.5) 74%,
+      rgba(4, 13, 20, 0.38) 100%
+    ),
+    radial-gradient(
+      circle at 78% 18%,
+      rgba(250, 129, 18, 0.2),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 30% 82%,
+      rgba(148, 180, 193, 0.1),
+      transparent 34%
+    ),
     url("/images/canyon-hero-abstract.png"),
     linear-gradient(135deg, #040d14 0%, #07131c 58%, #111c24 100%);
   background-position: center, center, center, center, center;
@@ -29,7 +43,13 @@
     linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
   background-size: 46px 46px;
   inset: 0;
-  mask-image: linear-gradient(90deg, transparent 0%, black 12%, black 70%, transparent 100%);
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    black 12%,
+    black 70%,
+    transparent 100%
+  );
 }
 
 .hero-section::after {
@@ -86,7 +106,13 @@
 
 .hero-atmosphere span {
   animation: signalDrift 9s ease-in-out infinite;
-  background: linear-gradient(90deg, transparent, rgba(148, 180, 193, 0.26), rgba(250, 129, 18, 0.24), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(148, 180, 193, 0.26),
+    rgba(250, 129, 18, 0.24),
+    transparent
+  );
   height: 1px;
   left: 8%;
   position: absolute;
@@ -245,7 +271,11 @@
 
 .operating-section {
   background:
-    radial-gradient(circle at 88% 10%, rgba(250, 129, 18, 0.08), transparent 28%),
+    radial-gradient(
+      circle at 88% 10%,
+      rgba(250, 129, 18, 0.08),
+      transparent 28%
+    ),
     linear-gradient(180deg, #f6f1e9 0%, #f2ece2 100%);
   color: var(--navy);
   display: grid;
@@ -314,7 +344,10 @@
   align-items: center;
   display: grid;
   gap: clamp(28px, 3.8vw, 58px);
-  grid-template-columns: minmax(230px, 0.38fr) minmax(460px, 0.84fr) minmax(340px, 0.5fr);
+  grid-template-columns: minmax(230px, 0.38fr) minmax(460px, 0.84fr) minmax(
+      340px,
+      0.5fr
+    );
   margin-left: 0;
   min-height: clamp(390px, 44vh, 500px);
   position: relative;
@@ -505,12 +538,18 @@
 }
 
 .flow-pulse-b {
-  offset-path: path("M650 210 C 770 210, 850 210, 924 210 C 996 210, 1074 210, 1158 210");
+  offset-path: path(
+    "M650 210 C 770 210, 850 210, 924 210 C 996 210, 1074 210, 1158 210"
+  );
 }
 
 .why-section {
   background:
-    radial-gradient(circle at 88% 12%, rgba(250, 129, 18, 0.08), transparent 28%),
+    radial-gradient(
+      circle at 88% 12%,
+      rgba(250, 129, 18, 0.08),
+      transparent 28%
+    ),
     linear-gradient(180deg, #fbf8f2 0%, #f6f1e9 100%);
   border-bottom: 1px solid rgba(222, 201, 161, 0.56);
   border-top: 1px solid rgba(222, 201, 161, 0.56);
@@ -569,19 +608,32 @@
   border: 0;
   border-radius: 0;
   display: grid;
-  gap: clamp(32px, 4.4vw, 68px);
+  gap: clamp(18px, 2.2vw, 26px);
   grid-template-columns: repeat(3, minmax(0, 1fr));
   overflow: visible;
 }
 
 .advantage-card {
-  background: transparent;
-  border-right: 0;
-  border-top: 2px solid rgba(222, 201, 161, 0.76);
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    radial-gradient(
+      circle at 82% 16%,
+      rgba(250, 129, 18, 0.12),
+      transparent 32%
+    ),
+    var(--navy-deep);
+  background-size:
+    38px 38px,
+    38px 38px,
+    auto,
+    auto;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
   display: grid;
-  grid-template-rows: auto auto;
-  min-height: 0;
-  padding: 26px 0 0;
+  grid-template-rows: auto 1fr;
+  min-height: clamp(180px, 17vw, 220px);
+  padding: clamp(24px, 2.4vw, 34px);
   position: relative;
   transition: transform 240ms var(--ease);
 }
@@ -590,52 +642,30 @@
   transform: translateY(-3px);
 }
 
-.advantage-card::before {
-  background: #fa8112;
-  content: "";
-  height: 2px;
-  left: 0;
-  position: absolute;
-  top: -2px;
-  width: 48px;
-}
-
-.advantage-visual {
-  align-items: flex-start;
-  border-bottom: 0;
-  display: flex;
-  min-height: 102px;
-  overflow: visible;
-  position: relative;
-}
-
-.advantage-visual::before {
-  display: none;
+.advantage-index {
+  color: #ff8d52;
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: clamp(28px, 4vw, 54px);
 }
 
 .advantage-copy {
+  align-self: end;
   display: grid;
   min-height: 0;
   padding: 0;
 }
 
 .advantage-card h3 {
-  color: var(--navy);
+  color: #fff;
   font-size: clamp(1.48rem, 2.15vw, 2.08rem);
   font-weight: 650;
   letter-spacing: -0.012em;
   line-height: 1.12;
-  margin: 0 0 14px;
-  max-width: 11.5ch;
-}
-
-.advantage-card p {
-  align-self: start;
-  color: rgba(7, 19, 28, 0.62);
-  font-size: clamp(0.94rem, 1.02vw, 1.02rem);
-  line-height: 1.58;
   margin: 0;
-  max-width: 37ch;
+  max-width: 11.5ch;
 }
 
 .frag-kpi {
@@ -793,7 +823,11 @@
 
 .audience-strip {
   background:
-    radial-gradient(circle at 88% 8%, rgba(250, 129, 18, 0.08), transparent 28%),
+    radial-gradient(
+      circle at 88% 8%,
+      rgba(250, 129, 18, 0.08),
+      transparent 28%
+    ),
     linear-gradient(180deg, #f6f1e9 0%, #f3ece1 100%);
   border-bottom: 1px solid rgba(222, 201, 161, 0.58);
   color: var(--navy);
@@ -894,9 +928,17 @@
   background:
     linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
-    radial-gradient(circle at 82% 24%, rgba(250, 129, 18, 0.18), transparent 30%),
+    radial-gradient(
+      circle at 82% 24%,
+      rgba(250, 129, 18, 0.18),
+      transparent 30%
+    ),
     var(--navy-deep);
-  background-size: 42px 42px, 42px 42px, auto, auto;
+  background-size:
+    42px 42px,
+    42px 42px,
+    auto,
+    auto;
   color: white;
   overflow: hidden;
   position: relative;
@@ -914,7 +956,12 @@
 }
 
 .final-cta::after {
-  background: linear-gradient(105deg, transparent 0%, rgba(250, 129, 18, 0.14) 44%, transparent 68%);
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    rgba(250, 129, 18, 0.14) 44%,
+    transparent 68%
+  );
   content: "";
   height: 150%;
   left: 58%;
@@ -1034,22 +1081,8 @@
   }
 
   .advantage-card {
-    border-bottom: 0;
-    display: grid;
-    gap: 22px;
-    grid-template-columns: minmax(220px, 0.36fr) minmax(0, 1fr);
-    grid-template-rows: auto;
-    min-height: 0;
-  }
-
-  .advantage-card:last-child {
-    border-bottom: 0;
-  }
-
-  .advantage-visual {
-    border-bottom: 0;
-    border-right: 0;
-    min-height: 104px;
+    grid-template-rows: auto auto;
+    min-height: clamp(150px, 26vw, 200px);
   }
 }
 
@@ -1113,23 +1146,15 @@
   }
 
   .advantage-card {
-    gap: 8px;
-    grid-template-columns: 1fr;
-    min-height: auto;
+    min-height: clamp(140px, 40vw, 180px);
   }
 
-  .advantage-visual {
-    border-bottom: 0;
-    border-right: 0;
-    min-height: 104px;
+  .advantage-index {
+    margin-bottom: 22px;
   }
 
   .advantage-copy {
     min-height: auto;
-  }
-
-  .advantage-card p {
-    align-self: start;
   }
 
   .audience-strip {
